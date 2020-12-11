@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.cours.classes.IFace.Controller">
+   <top>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="runBTN" mnemonicParsing="false" onAction="#runBTN_Click" prefHeight="26.0" prefWidth="52.0" text="Run" />
+            <Button fx:id="pauseBTN" disable="true" mnemonicParsing="false" onAction="#pauseBTN_Click" prefHeight="26.0" prefWidth="64.0" text="Pause" />
+            <Button fx:id="resetBTN" disable="true" mnemonicParsing="false" onAction="#resetBTN_Click" prefHeight="26.0" prefWidth="56.0" text="Clear" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+       <TabPane prefHeight="456.0" prefWidth="329.0" rotateGraphic="true" style="-fx-border-color: gray;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+           <tabs>
+               <Tab text="Queue List">
+                   <content>
+                       <TableView fx:id="queueTable" prefHeight="400.0" prefWidth="195.0" tableMenuButtonVisible="true">
+                           <columns>
+                           </columns>
+                           <columnResizePolicy>
+                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                       </TableView>
+                   </content>
+               </Tab>
+               <Tab text="Rejected List">
+                   <content>
+                       <TableView fx:id="rejectedTable" prefHeight="400.0" prefWidth="195.0" tableMenuButtonVisible="true">
+                           <columnResizePolicy>
+                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                       </TableView>
+                   </content>
+               </Tab>
+               <Tab text="Done List">
+                   <content>
+                       <TableView fx:id="doneTable" prefHeight="400.0" prefWidth="195.0" tableMenuButtonVisible="true">
+                           <columnResizePolicy>
+                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                       </TableView>
+                   </content>
+               </Tab>
+            <Tab text="Cores List">
+               <content>
+                  <TableView fx:id="CoresTable" prefHeight="400.0" prefWidth="195.0" tableMenuButtonVisible="true">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </content>
+            </Tab>
+           </tabs>
+       </TabPane>
+   </center>
+</BorderPane>
