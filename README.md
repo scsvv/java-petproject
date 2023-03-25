@@ -1,2 +1,2 @@
 # Java pet project 
-# Multythread principal work in Java
+Multythread principal work in Java
